@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exata Laudos</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/fabiogrisard/addcasa/refs/heads/main/logoexatanovo.JPG">
+    <meta name="theme-color" content="#007bff">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 800px;
+            width: 90%;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #007BFF;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        img {
+            display: block;
+            width: 150px;
+            margin: 0 auto 20px;
+        }
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+        }
+        .button {
+            padding: 15px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        /* Estilos para dispositivos móveis */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+            .button-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/fabiogrisard/addcasa/refs/heads/main/logoexatanovo.JPG" alt="Logotipo">
+        <h1>Exata Laudos</h1>
+        <div class="button-grid">
+            <a href="https://fabiogrisard.github.io/criarlaudo/" class="button">Criar Laudo</a>
+            <a href="https://n8n.serranarealty.com.br/form/criarplanilha" class="button">Criar Pasta</a>
+            <a href="https://fabiogrisard.github.io/addterreno/" class="button">Adicionar Terreno</a>
+            <a href="https://fabiogrisard.github.io/addcasa/" class="button">Adicionar Edificação</a>
+        </div>
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js');
+            });
+        }
+    </script>
+</body>
+</html>
